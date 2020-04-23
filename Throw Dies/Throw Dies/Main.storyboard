@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SingleViewPlayground" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="請擲骰" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lNE-3B-bEb">
+                                <rect key="frame" x="20" y="20" width="374" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="vew-9G-1b7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bowl5_5" translatesAutoresizingMaskIntoConstraints="NO" id="d3O-Eq-EtZ">
+                                <rect key="frame" x="0.0" y="161" width="414" height="414"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="414" id="PMi-vz-ifa"/>
+                                    <constraint firstAttribute="width" constant="414" id="hgy-eH-VO2"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="53" translatesAutoresizingMaskIntoConstraints="NO" id="eNY-a0-sgH">
+                                <rect key="frame" x="110" y="261.66666666666669" width="194" height="213"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="OnM-g8-E8d">
+                                        <rect key="frame" x="0.0" y="0.0" width="194" height="80"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" verticalHuggingPriority="251" image="six" translatesAutoresizingMaskIntoConstraints="NO" id="SAn-iJ-hb2">
+                                                <rect key="frame" x="0.0" y="0.0" width="84" height="80"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="six" translatesAutoresizingMaskIntoConstraints="NO" id="aGa-Sr-Xtq">
+                                                <rect key="frame" x="114" y="0.0" width="80" height="80"/>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="34" translatesAutoresizingMaskIntoConstraints="NO" id="i9Z-ww-EbZ">
+                                        <rect key="frame" x="0.0" y="133" width="194" height="80"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="six" translatesAutoresizingMaskIntoConstraints="NO" id="Gpf-np-m17">
+                                                <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="six" translatesAutoresizingMaskIntoConstraints="NO" id="HOL-td-gaI">
+                                                <rect key="frame" x="114" y="0.0" width="80" height="80"/>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="uwO-2R-euM" appends="YES" id="C5U-gx-hKy"/>
+                                </connections>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" name="systemBrownColor" catalog="System" colorSpace="catalog"/>
+                        <constraints>
+                            <constraint firstItem="d3O-Eq-EtZ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="7YV-SO-8La"/>
+                            <constraint firstItem="lNE-3B-bEb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Coh-oU-9uo"/>
+                            <constraint firstItem="eNY-a0-sgH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PpO-fJ-7aA"/>
+                            <constraint firstItem="lNE-3B-bEb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="ahT-T2-Tme"/>
+                            <constraint firstItem="eNY-a0-sgH" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="kND-57-qn2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lNE-3B-bEb" secondAttribute="trailing" constant="20" id="o0G-dG-0VL"/>
+                            <constraint firstItem="d3O-Eq-EtZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="s4T-Rn-eUr"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="scoreLabel" destination="lNE-3B-bEb" id="jtE-gb-WAx"/>
+                        <outletCollection property="dies" destination="SAn-iJ-hb2" collectionClass="NSMutableArray" id="Uen-I5-XcA"/>
+                        <outletCollection property="dies" destination="aGa-Sr-Xtq" collectionClass="NSMutableArray" id="Sv9-GY-IQ4"/>
+                        <outletCollection property="dies" destination="Gpf-np-m17" collectionClass="NSMutableArray" id="a9t-5V-fSE"/>
+                        <outletCollection property="dies" destination="HOL-td-gaI" collectionClass="NSMutableArray" id="9bB-nG-wH5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="uwO-2R-euM">
+                    <connections>
+                        <action selector="imageTapped:" destination="BYZ-38-t0r" id="Pgt-G2-2SD"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="136.23188405797103" y="132.88043478260872"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bowl5_5" width="290" height="290"/>
+        <image name="six" width="80" height="80"/>
+    </resources>
+</document>
